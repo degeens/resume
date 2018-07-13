@@ -1,0 +1,22 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(235, 235, 235);
+}
+
+.container {
+    background-color: white;
+}
+
+img {
+    border: 5px solid white;
+}
+
+.sticky-top {
+    top: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .container {
+        margin: 1.5rem auto;
+    }
+}
