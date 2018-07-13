@@ -1,0 +1,23 @@
+{
+  "name": "degeens.github.io",
+  "version": "1.0.0",
+  "description": "De persoonlijke website van Stijn Geens, student Toegepaste Informatica met een passie voor webdevelopment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/degeens/degeens.github.io.git"
+  },
+  "author": "Stijn Geens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/degeens/degeens.github.io/issues"
+  },
+  "homepage": "https://github.com/degeens/degeens.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
