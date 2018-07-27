@@ -1,16 +1,12 @@
 body {
   font-family: sans-serif;
   background-color: #ebebeb; }
-
-.container {
-  background-color: white; }
-
-img {
-  border: 5px solid white; }
-
-.sticky-top {
-  top: 1.5rem; }
-
-@media (min-width: 576px) {
-  .container {
-    margin: 1.5rem auto; } }
+  body .container {
+    background-color: white; }
+    @media (min-width: 576px) {
+      body .container {
+        margin: 1.5rem auto; } }
+  body img {
+    border: 5px solid white; }
+  body .sticky-top {
+    top: 1.5rem; }
