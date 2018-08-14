@@ -8,13 +8,27 @@ body {
         @media (min-width: 576px) {
             margin: 1.5rem auto;
         }
-    }
-    
-    img {
-        border: 5px solid white;
-    }
-    
-    .sticky-top {
-        top: 1.5rem;
+
+        .sticky-top {
+            top: 1.5rem;
+        }
+
+        img {
+            border: 5px solid white;
+        }
+        
+        .period-top {
+            @media (min-width: 495px) {
+                display: none;
+            }
+        }
+
+        .period-right {
+            display: none;
+
+            @media (min-width: 495px) {
+                display: block;
+            }
+        }
     }
 }
