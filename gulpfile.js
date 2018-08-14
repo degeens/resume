@@ -19,5 +19,5 @@ gulp.task('style', function () {
 });
  
 gulp.task('style:watch', function () {
-  gulp.watch(paths.styles.src, ['style']);
+  gulp.watch(paths.styles.src, gulp.series('style'));
 });
