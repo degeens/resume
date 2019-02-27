@@ -17,18 +17,15 @@ body {
             border: 5px solid white;
         }
 
-        .truncate {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .social-button {
+            display: block;
+            height: 40px;
+            width: 40px;
+            line-height: 44px;
+            background-color: white;
+            border-radius: 50%;
         }
 
-        h3 {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-        }
-        
         .period-top {
             @media (min-width: 495px) {
                 display: none;
@@ -41,6 +38,12 @@ body {
             @media (min-width: 495px) {
                 display: block;
             }
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
         }
     }
 }
