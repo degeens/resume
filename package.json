@@ -4,7 +4,8 @@
   "description": "De persoonlijke website van Stijn Geens, student Toegepaste Informatica met een passie voor applicatieontwikkeling.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp styles",
+    "start:watch": "gulp serve"
   },
   "repository": {
     "type": "git",
