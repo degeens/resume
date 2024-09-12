@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+      // Detect browser language
+      const userLang = navigator.language || navigator.userLanguage;
+      const lang = userLang.split('-')[0]; // Get language code (e.g., 'en' from 'en-US')
+
+      // Define supported languages
+      const supportedLanguages = ['en', 'nl'];
+
+      // Default to 'en' if language is not supported
+      if (!supportedLanguages.includes(lang)) {
+        window.location.href = './lang/en/index.html';
+      } else {
+        // Redirect to the appropriate language directory
+        window.location.href = './lang/' + lang + '/index.html';
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting you to the correct language version...</p>
+  </body>
+  </html>
