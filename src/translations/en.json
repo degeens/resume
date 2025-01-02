@@ -71,5 +71,8 @@
     "or": "or",
     "read_in": "Read in",
     "skills": "Skills",
+    "skills.frameworks": "Frameworks",
+    "skills.infrastructure": "Infrastructure",
+    "skills.programming_languages": "Programming languages",
     "summary": "Fullstack Developer at Euricom"
 }

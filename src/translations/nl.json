@@ -71,5 +71,8 @@
     "or": "of",
     "read_in": "Lees in het",
     "skills": "Vaardigheden",
+    "skills.frameworks": "Frameworks",
+    "skills.infrastructure": "Infrastructuur",
+    "skills.programming_languages": "Programmeertalen",
     "summary": "Fullstack Developer bij Euricom"
 }
