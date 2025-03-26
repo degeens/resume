@@ -53,7 +53,7 @@
     "experience.teal_partners.company": "Teal Partners",
     "experience.teal_partners.contract_type": "Euricom consultant",
     "experience.teal_partners.job_title": "Fullstack .NET/Angular Developer",
-    "experience.teal_partners.location": "Antwerpen",
+    "experience.teal_partners.location": "Antwerp",
     "experience.teal_partners.period": "Jun 2022 - Present",
     "experience.teal_partners.summary": "Worked on the development of SD Worx Buddy, a multi-country HR and payroll solution for SMEs and midmarket.<br><br>Contributed to the configuration, payroll and integration modules, including:<br><ul><li>Redesign the configuration release process, enabling HR and payroll experts to continuously deploy and review legislative changes across Buddy environments.</li><li>Transform raw calendar data into actionable insights essential for payroll calculations and declarations.</li><li>Implement various German declarations for absences due to incapacity to work, including eAU, AAG, and EEL.</li></ul>",
     "experience.v33.company": "V33 Benelux",
