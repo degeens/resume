@@ -31,7 +31,7 @@
     "experience.bluecrux.job_title": "Backend .NET Developer",
     "experience.bluecrux.location": "Mechelen",
     "experience.bluecrux.period": "dec 2019 - mei 2022",
-    "experience.bluecrux.summary": "Bijgedragen aan de ontwikkeling van LOP.ai, een digital supply chain twin voor multinationals.",
+    "experience.bluecrux.summary": "Gewerkt aan LOP.ai, een digital supply chain twin voor multinationals.<br><br>Bijgedragen aan de ontwikkeling en integratie van microservices die op Kubernetes draaien, waarbij performance, scalability en high availability worden gewaarborgd, waaronder:<br><ul><li>Ontwikkelen van een service die ruwe supply chain data transformeert naar een formaat dat afgestemd is op de digital twin.</li><li>Bouwen van een in-memory database, geoptimaliseerd voor efficiënte bevraging van de getransformeerde data.</li></ul>",
     "experience.euricom.company": "Euricom",
     "experience.euricom.contract_type": "Stagiair • Student",
     "experience.euricom.job_title": "Fullstack .NET/Angular Developer",
