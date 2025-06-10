@@ -10,7 +10,7 @@ const file = require('gulp-file');
 var paths = {
   html: {
     src: './src/**/*.html',
-    dest: './dist/lang'
+    dest: './dist'
   },
   img: {
     src: './src/assets/img/**/*',
@@ -66,10 +66,10 @@ gulp.task('create-redirect', function () {
 
       // Default to 'en' if language is not supported
       if (!supportedLanguages.includes(lang)) {
-        window.location.href = './lang/en/index.html';
+        window.location.href = './en';
       } else {
         // Redirect to the appropriate language directory
-        window.location.href = './lang/' + lang + '/index.html';
+        window.location.href = './' + lang;
       }
     </script>
   </head>
