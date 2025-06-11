@@ -1,5 +1,5 @@
-# Online resume
+# Resume
 
-**A simple online resume built with Bootstrap.**
+**A simple resume built with Bootstrap.**
 
 ![Example](example.png)
