@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+
+@media (min-width: 576px) {
+    .container {
+        margin: 1.5rem auto;
+    }
+}
+
+.container .sticky-top {
+    top: 1.5rem;
+}
+
+.container .social-button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 44px;
+    background-color: white;
+    border-radius: 50%;
+}

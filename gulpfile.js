@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const fs = require('fs');
@@ -17,8 +17,8 @@ const paths = {
     src: './src/assets/img/**/*',
     dest: './dist/assets/img'
   },
-  sass: {
-    src: './src/assets/scss/**/*.scss',
+  css: {
+    src: './src/assets/css/**/*.css',
     dest: './dist/assets/css'
   },
   translations: './src/translations/**/*.json'
@@ -92,24 +92,24 @@ gulp.task('copy-images', function() {
   return gulp.src(paths.img.src, { encoding: false })
     .pipe(gulp.dest(paths.img.dest));
 });
- 
-gulp.task('sass', function() {
-  removeFiles(paths.sass.dest);
 
-  return gulp.src(paths.sass.src)
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+gulp.task('css', function() {
+  removeFiles(paths.css.dest);
+  
+  return gulp.src(paths.css.src)
+    .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.sass.dest));
+    .pipe(gulp.dest(paths.css.dest));
 });
 
 gulp.task('watch', function() {
   gulp.watch(paths.html.src, gulp.series('translate'));
   gulp.watch(paths.translations, gulp.series('translate'));
   gulp.watch(paths.img.src, gulp.series('copy-images'));
-  gulp.watch(paths.sass.src, gulp.series('sass'));
+  gulp.watch(paths.css.src, gulp.series('css'));
 });
 
-gulp.task('default', gulp.series('translate', 'create-redirect', 'copy-images', 'sass', 'watch'));
+gulp.task('default', gulp.series('translate', 'create-redirect', 'copy-images', 'css', 'watch'));
 
 function removeFiles(directory) {
   if (!fs.existsSync(directory)) { 
