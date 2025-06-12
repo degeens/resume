@@ -7,7 +7,7 @@ const path = require('path');
 const merge = require('merge-stream');
 const file = require('gulp-file');
 
-var paths = {
+const paths = {
   html: {
     src: './src/**/*.html',
     dest: './dist'
@@ -31,6 +31,9 @@ gulp.task('translate', function() {
     .forEach(translationFile => {
       const language = path.basename(translationFile, '.json');
       const translations = JSON.parse(fs.readFileSync(`src/translations/${translationFile}`));
+      
+      const destPath = `${paths.html.dest}/${language}`;
+      removeFiles(destPath);
 
       let htmlStream = gulp.src(paths.html.src);
 
@@ -40,7 +43,7 @@ gulp.task('translate', function() {
           htmlStream = htmlStream.pipe(replace(`{{${key}}}`, translations[key]));
         });
 
-      htmlStream = htmlStream.pipe(gulp.dest(`${paths.html.dest}/${language}`))
+      htmlStream = htmlStream.pipe(gulp.dest(destPath));
 
       mergedStream.add(htmlStream);
   });
@@ -83,11 +86,15 @@ gulp.task('create-redirect', function () {
 });
 
 gulp.task('copy-images', function() {
+  removeFiles(paths.img.dest);
+  
   return gulp.src(paths.img.src, { encoding: false })
-  .pipe(gulp.dest(paths.img.dest));
-})
+    .pipe(gulp.dest(paths.img.dest));
+});
  
 gulp.task('sass', function() {
+  removeFiles(paths.sass.dest);
+
   return gulp.src(paths.sass.src)
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(rename({ suffix: '.min' }))
@@ -102,3 +109,17 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', gulp.series('translate', 'create-redirect', 'copy-images', 'sass', 'watch'));
+
+function removeFiles(directory) {
+  if (!fs.existsSync(directory)) { 
+    return;
+  }
+
+  fs
+    .readdirSync(directory)
+    .forEach(file => {
+      const filePath = path.join(directory, file);
+
+      fs.rmSync(filePath);
+    });
+}
