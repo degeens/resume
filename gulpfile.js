@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const merge = require('merge-stream');
 const file = require('gulp-file');
+var log = require('fancy-log');
 
 const paths = {
   html: {
@@ -114,6 +115,8 @@ function removeFiles(directory) {
   if (!fs.existsSync(directory)) { 
     return;
   }
+
+  log(`Removing files in ${directory}`);
 
   fs
     .readdirSync(directory)
