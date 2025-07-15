@@ -9,6 +9,10 @@ body {
     }
 }
 
+.container hr {
+    background-color: rgb(245, 245, 245);
+}
+
 .container .sticky-top {
     top: 1.5rem;
 }
