@@ -53,7 +53,7 @@ gulp.task('translate', function() {
 });
 
 gulp.task('create-redirect', function () {
-  const redirectHtml = 
+  const html = 
   `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -82,7 +82,25 @@ gulp.task('create-redirect', function () {
   </body>
   </html>`;
 
-  return file('index.html', redirectHtml, { src: true })
+  return file('index.html', html, { src: true })
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('create-404', function () {
+  const html = 
+  `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Stijn Geens</title>
+  </head>
+  <body>
+    <p>404: It looks like this page took a coffee break.</p>
+  </body>
+  </html>`;
+
+  return file('404.html', html, { src: true })
     .pipe(gulp.dest('./dist'));
 });
 
@@ -109,7 +127,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.css.src, gulp.series('css'));
 });
 
-gulp.task('default', gulp.series('translate', 'create-redirect', 'copy-images', 'css', 'watch'));
+gulp.task('default', gulp.series('translate', 'create-redirect', 'create-404', 'copy-images', 'css', 'watch'));
 
 function removeFiles(directory) {
   if (!fs.existsSync(directory)) { 
