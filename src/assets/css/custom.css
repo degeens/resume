@@ -6,7 +6,40 @@ body {
 @media (min-width: 576px) {
     .container {
         margin: 1.5rem auto;
+        border-radius: 0.5rem; /* Needed for box shadow to respect rounded corners */
     }
+}
+
+@media (min-width: 576px) {
+    .container > .row > header {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    .container > .row > div:last-child {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .container > .row > header {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .container > .row > div:last-child {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+img:not(.rounded-circle) {
+    border-radius: 0.375rem;
 }
 
 .container hr {
