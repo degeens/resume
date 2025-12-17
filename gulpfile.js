@@ -173,6 +173,8 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series('translate', 'create-redirect', 'create-404', 'copy-images', 'css', 'watch'));
 
+gulp.task('build', gulp.series('translate', 'create-redirect', 'create-404', 'copy-images', 'css'));
+
 function removeFiles(directory) {
   if (!fs.existsSync(directory)) { 
     return;
