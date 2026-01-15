@@ -142,8 +142,8 @@ gulp.task('create-404', function () {
       <div class="container shadow p-0">
         <main class="bg-white text-dark px-4 py-5 text-center">
           <h1>404</h1>
-          <h2 class="h4 mb-4">Page not found</h2>
-          <p class="text-muted">It looks like this page took a coffee break.</p>
+          <p class="text-muted mb-4">Maybe this page took a coffee break, or it got lost in the cloud.</p>
+          <a href="https://www.stijngeens.com" class="btn btn-outline-dark">Let’s pretend this never happened</a>
         </main>
       </div>
     </body>
