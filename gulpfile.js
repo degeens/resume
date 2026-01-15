@@ -54,7 +54,7 @@ gulp.task('translate', function() {
 
 gulp.task('create-redirect', function () {
   const html = 
-  `<!DOCTYPE html>
+  `<!doctype html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -88,7 +88,7 @@ gulp.task('create-redirect', function () {
 
 gulp.task('create-404', function () {
   const html = 
-  `<!DOCTYPE html>
+  `<!doctype html>
   <html lang="en">
     <head>
       <meta charset="UTF-8">
@@ -116,6 +116,11 @@ gulp.task('create-404', function () {
 
         .container {
           max-width: 576px;
+          border-radius: 0.5rem; /* Needed for box shadow to respect rounded corners */
+        }
+
+        main {
+          border-radius: 0.5rem;
         }
 
         @media (max-width: 576px) {
